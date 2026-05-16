@@ -1,0 +1,39 @@
+name: Build and Release Resume PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - main.tex
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: false
+          latexmk_shell_escape: false
+          args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Publish latest PDF release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: resume-latest
+          name: Latest Resume PDF
+          body: |
+            Auto-generated release for commit `${{ github.sha }}`.
+          allowUpdates: true
+          replacesArtifacts: true
+          artifacts: main.pdf
