@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% --- AUTOMATTIC-OPTIMIZED CONFIGURATION ---
+\moderncvstyle{banking} 
+\moderncvcolor{blue} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.78]{geometry} 
+\usepackage{import}
+\usepackage{etoolbox} 
+
+% Hyperref setup for ATS and PDF readers
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdfnewwindow=true,
+}
+
+% --- ELITE RESUME SPACING ADJUSTMENTS ---
+\patchcmd{\section}{\vspace*{2.5ex}}{\vspace*{4ex}}{}{}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.5ex, topsep=0.5ex, parsep=0.5ex}
+
+% Personal Information
+\name{Fernando}{Paladini}
+\title{Staff-level Software Engineer | AI Platforms | Open Source | Backend Systems}
+\address{Florianópolis, Brazil}{Remote-first | BRT / US-friendly timezone}{}
+\phone[mobile]{+55 48 998459684}
+\email{fnpaladini@gmail.com}
+\extrainfo{linkedin.com/in/fernandopaladini}
+\extrainfo{github.com/paladini}
+\extrainfo{https://mcp-me.page}
+
+\begin{document}
+
+\makecvtitle
+
+\vspace{-2.5em}
+
+\section{Professional Summary}
+Staff-level Software Engineer with 13+ years of experience building backend platforms, developer tools, and cloud-native applications. Expert in \textbf{PHP, NodeJS, Ruby on Rails, and distributed systems architecture}. Most recently contributed to the GenAI adoption and governance strategy for a 3,000+ developer organization, building data pipelines and standards for engineering productivity. Creator of \textbf{mcp-me}, an open-source MCP project focused on contextual identity for LLM-based tools. Proven success in leading technical roadmaps in fully remote and asynchronous environments.
+
+\vspace{1.5ex}
+
+\section{Selected Technical Impact}
+\begin{itemize}
+    \item \textbf{AI Strategy:} Orchestrated GenAI governance and adoption strategy for 3,000+ engineers, standardizing GitHub Copilot usage and productivity metrics.
+    \item \textbf{System Throughput:} Architected Go-based services that increased inbound logistics throughput by \textbf{15\%} for Mercado Livre across LATAM.
+    \item \textbf{Scalable Infrastructure:} Maintained mission-critical GovTech systems with \textbf{99.9\% uptime} using AWS-hosted PHP and Python pipelines.
+    \item \textbf{Open Source:} Created mcp-me, an extensibility framework for AI agents with \textbf{329+ generators} implemented across 44 source files.
+\end{itemize}
+
+\vspace{1.5ex}
+
+\section{Technical Skills}
+\cvitem{Languages}{PHP (Expert), NodeJS (Expert), Ruby on Rails (Deep expertise), Go, Python, React, Next.js, TypeScript, SQL.}
+\cvitem{AI \& Productivity}{GitHub Copilot, Model Context Protocol (MCP), LLM Workflows, DORA Metrics, GenAI Governance.}
+\cvitem{Cloud \& Ops}{AWS (Expert), GCP, Kubernetes, Docker, Terraform (IaC), CI/CD, GitHub Actions, Observability.}
+\cvitem{Architecture}{Distributed Systems, Microservices, REST/GraphQL APIs, Event-driven systems, Scale-out patterns.}
+\cvitem{Platforms}{WordPress (Custom Plugins/Themes), Ruby on Rails, Laravel, NestJS, Sidekiq, Redis, RabbitMQ.}
+\cvitem{Databases}{MySQL, MariaDB, MongoDB, DynamoDB, AWS RDS, Aurora, BigQuery, PostgreSQL, Cassandra, KairosDB.}
+
+\vspace{1.5ex}
+
+\section{Professional Experience}
+
+\cventry{Jun 2024 -- Feb 2026}{Developer Specialist I (Staff-level Scope)}{Grupo Boticário}{Remote, Brazil}{}{
+\begin{itemize}
+    \item \textbf{GenAI Adoption Strategy:} Contributed to the adoption and governance of Generative AI for an organization of 3,000+ developers; standardized GitHub Copilot usage, established security practices, and defined metrics for engineering productivity.
+    \item \textbf{Engineering Analytics:} Built BigQuery-based data ingestion pipelines (utilizing Pub/Sub and GitHub APIs) to provide real-time visibility into DORA metrics and AI impact across engineering teams.
+    \item \textbf{Developer Experience (DX):} Architected LLM-powered internal tools (Slack bots and custom APIs) to automate technical request fulfillment, significantly reducing manual ticket volume.
+\end{itemize}}
+
+\vspace{2ex}
+
+\cventry{Jul 2023 -- Jun 2024}{Senior Back-End Engineer}{Conviso Application Security}{Remote, Brazil}{}{
+\begin{itemize}
+    \item \textbf{Rails Integration Architecture:} Owned the technical roadmap for enterprise-level security integrations, designing Ruby on Rails APIs and OAuth patterns for Azure Boards and Businessmap.
+    \item \textbf{Reliability Engineering:} Improved reliability of high-volume scan processing by refactoring background jobs (Sidekiq) and asynchronous failure handling, reducing processing latency for enterprise clients.
+\end{itemize}}
+
+\vspace{2ex}
+
+\cventry{Nov 2021 -- Mar 2023}{Senior Full-Stack Developer}{Adroit Creations}{Remote (New Zealand / Australia)}{}{
+\begin{itemize}
+    \item \textbf{PHP \& WordPress for GovTech:} Built and maintained mission-critical platforms for Australian public-sector clients using PHP, Laravel, and WordPress; delivered custom themes, plugins, and secure backend workflows.
+    \item \textbf{Cloud Migration:} Led AWS-hosted database migrations and ERP integrations while maintaining 99.9\% uptime for government digital operations.
+\end{itemize}}
+
+\vspace{2ex}
+
+\cventry{Dec 2020 -- Nov 2021}{Software Development SSr Analyst}{Mercado Livre}{Florianópolis, Brazil}{}{
+\begin{itemize}
+    \item \textbf{Logistics Throughput (Go):} Architected Go-based services for Cross-Docking operations, achieving a \textbf{15\% increase in inbound throughput} across LATAM logistics facilities.
+\end{itemize}}
+
+\vspace{2ex}
+
+\cventry{Jun 2016 -- Jun 2020}{Tech Manager / Senior Developer}{1Doc (GovTech SaaS)}{Florianópolis, Brazil}{}{
+\begin{itemize}
+    \item \textbf{Scaling PHP SaaS:} Led the development of a high-growth G2C platform serving hundreds of public agencies; managed AWS infrastructure (EC2, S3, RDS) to scale digital processes for millions of citizen interactions.
+    \item \textbf{Automation \& OCR:} Reduced manual document review effort by building parallelized Python OCR pipelines for unstructured government records and document processing.
+\end{itemize}}
+
+\vspace{1.5ex}
+
+\section{Featured Open Source Project}
+\cventry{https://mcp-me.page}{mcp-me}{Creator \& Lead Architect}{github.com/paladini/mcp-me}{}{
+\begin{itemize}
+    \item \textbf{Personal Identity Layer for AI:} Designed a structured profile layer using the \textbf{Model Context Protocol (MCP)}, allowing AI assistants to preserve user/project context across different tools.
+    \item \textbf{Extensible CLI Ecosystem:} Built an architecture supporting \textbf{329+ data generators} and 13 real-time plugins, focusing on local-first privacy (YAML-based) and community-driven extensibility.
+\end{itemize}}
+
+\vspace{1.5ex}
+
+\section{Education \& Certifications}
+\cventry{2023 -- Present}{Degree in Systems Analysis and Development}{UDESC}{Brazil}{}{Expected completion: 2026}
+\cvitem{Certification}{\textbf{GitHub Copilot Certified (GH-300)} -- Microsoft Professional Certification}
+\cvitem{Specialization}{Big Data Specialization -- University of California, San Diego (Coursera)}
+\cvitem{Technical Course}{AWS Technical Essentials -- Amazon Web Services}
+
+\end{document}
